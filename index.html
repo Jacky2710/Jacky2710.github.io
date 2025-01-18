@@ -16,6 +16,7 @@
             align-items: center;
             min-height: 100vh;
             flex-direction: column;
+            background-color: #f0f0f0; /* Fondo claro para contrastar */
         }
 
         /* Contenedor para la foto y el contenido */
@@ -47,28 +48,27 @@
             max-width: 600px;
         }
 
+        h1, h2, p {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
         h2 {
             color: #4CAF50;
             border-bottom: 2px solid #4CAF50;
             display: inline-block;
             margin-bottom: 10px;
-            opacity: 0;
-            animation: fadeIn 1s forwards 0.3s;
+            animation-delay: 1s;
         }
 
-        /* Efecto de desvanecimiento para el texto */
-        p, h1 {
-            opacity: 0;
-            animation: fadeIn 1s forwards 0.5s;
-        }
-
+        /* Animación para el desvanecimiento */
         @keyframes fadeIn {
             to {
                 opacity: 1;
             }
         }
 
-        /* Botones de redes sociales */
+        /* Redes sociales */
         .social-links a {
             text-decoration: none;
             background-color: #4CAF50;
