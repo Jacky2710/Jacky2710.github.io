@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página Personal</title>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -108,7 +108,7 @@
     <!-- Contenido principal -->
     <main>
         <!-- Foto -->
-        <img src="tu-foto.jpg" alt="Foto de Jacky">
+        <img src="foto.jpg" alt="Foto de Jacky">
         
         <!-- Descripción -->
         <p>Bienvenido a mi página personal. Aquí puedes aprender más sobre mí.</p>
@@ -147,8 +147,13 @@
 
     <!-- Inicializar partículas -->
     <script>
-       particulasJS.load('particulas-js', 'particulas.json', function() {
+        <div id="particulas-js" style="height: 100vh;"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+            particulasJS.load('particulas-js', 'particulas.json', function() {
             console.log('Partículas cargadas correctamente.');
+            
+            </script>
+    
         });
     </script>
 </body>
