@@ -4,36 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página Personal</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            color: #333;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
         header {
-            background-color: #4CAF50;
+            background: rgba(0, 0, 0, 0.7);
             color: white;
-            padding: 15px;
             text-align: center;
+            padding: 30px;
+            position: relative;
         }
         main {
             padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+        main img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        main img:hover {
+            transform: scale(1.1);
+        }
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .social-links a {
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .social-links a:hover {
+            background-color: #2E8B57;
+            transform: translateY(-5px);
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        form {
+            text-align: left;
+            max-width: 600px;
+            margin: 20px auto;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        form button:hover {
+            background-color: #2E8B57;
         }
     </style>
 </head>
 <body>
+    <!-- Efecto de partículas -->
+    <div id="particles-js"></div>
+
+    <!-- Encabezado -->
     <header>
-        <h1>Hola, soy Jacky Ramirez </h1>
+        <h1>Hola, soy Jacky Ramírez</h1>
     </header>
+
+    <!-- Contenido principal -->
     <main>
-        <p>Bienvenido a mi página personal. Aquí puedes aprender más sobre mi.</p>
-        <h2>Sobre mí</h2>
-        <p>Normalmente todos me llaman Jacky o Jacque y efectivamente ya que jeje , estoy estudiando Desarrollo de Software Multiplataforma
-        voy en 5to cuatrimestre me gusta mucho cantar y bailar son de las cosas que mas disfruto hacer , tambien programar excepto cuando no me sale 
-        tambien me gusta mucho el maquillaje y los caballos. Si me vez con un sombrero , si asi es soy yo !! </p>
+        <!-- Foto -->
+        <img src="tu-foto.jpg" alt="Foto de Jacky">
         
+        <!-- Descripción -->
+        <p>Bienvenido a mi página personal. Aquí puedes aprender más sobre mí.</p>
+        
+        <h2>Sobre mí</h2>
+        <p>Normalmente todos me llaman Jacky o Jacque. Estoy estudiando Desarrollo de Software Multiplataforma y voy en 5to cuatrimestre. Me gusta mucho cantar y bailar, son de las cosas que más disfruto hacer. También programar (excepto cuando no me sale 😅). Me encanta el maquillaje y los caballos. Si me ves con un sombrero... ¡sí, soy yo!</p>
+        
+        <!-- Redes sociales -->
+        <h2>Mis Redes Sociales</h2>
+        <p class="social-links">
+            <a href="https://facebook.com/tu-usuario" target="_blank">Facebook</a>
+            <a href="https://instagram.com/tu-usuario" target="_blank">Instagram</a>
+            <a href="https://twitter.com/tu-usuario" target="_blank">Twitter</a>
+        </p>
+
+        <!-- Formulario de contacto -->
+        <h2>Contáctame</h2>
+        <form action="https://formspree.io/f/tu-email" method="POST">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
     </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2025 Jacky Ramírez | Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Inicializar partículas -->
+    <script>
+        particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/demo/particles.json', function() {
+            console.log('Partículas cargadas correctamente.');
+        });
+    </script>
 </body>
 </html>
