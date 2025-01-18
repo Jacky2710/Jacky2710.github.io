@@ -1,22 +1,24 @@
 {
-  "particles": {
-    "number": {
-      "value": 50
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "circle"
-    },
-    "opacity": {
-      "value": 0.5
-    },
-    "size": {
-      "value": 5
-    },
-    "move": {
-      "speed": 2
+    "particles": {
+        "number": {
+            "value": 100,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#ffffff"
+        },
+        "shape": {
+            "type": "circle"
+        },
+        "size": {
+            "value": 5
+        },
+        "move": {
+            "enable": true,
+            "speed": 3
+        }
     }
-  }
 }
